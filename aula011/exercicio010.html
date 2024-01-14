@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        section{
+            display: block;
+            background-color: #826999;
+            height: 250px;
+            width:200px;
+            border-radius: 20px;
+            padding: 10px;
+            margin: auto;
+        }
+        section h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            color: #fff;
+            text-align: center;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        p input{
+            width: 50px;
+            margin-top: 10px;
+            border-radius: 2px;
+            border: 0;
+        }
+        #verif{
+            display: block;
+            padding: 8px;
+            border: 0 ;
+            border-radius: 7px;
+            margin: auto;
+
+        }
+        #resultado{
+            color: rgb(215, 195, 235);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Sistema de Multas</h1>
+        <p>
+            Qual a velocidade do veiculo: <br>
+             <input type="number" name="txtvel" id="txtvel"> Km/h
+            </p>
+            
+        <div id="resultado"></div>
+           <div>
+        <input type="button" value="Verificar" id="verif" onclick="verificar()">
+        </div>
+        
+    </section>
+
+    <script>
+        function verificar(){
+            var vel = document.getElementById('txtvel')
+            var resu = document.getElementById('resultado')
+
+            var res = Number(vel.value)
+            if (res > 50){
+                resu.innerHTML = `A velocidade é ${res}, Você passou o limite, MULTADO`
+            }else{
+                resu.innerHTML = `A velocidade é ${res}, Você está no limite, MUITO BEM`
+            }
+        }
+    </script>
+</body>
+</html>

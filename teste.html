@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Dom</title>
+</head>
+<body>
+    <h1>Soma de Valores</h1>
+    <input type="number" name="vn1" id="vn1"> +
+    <input type="number" name="vn2" id="vn2">
+    <input type="button" id="soma" value="Somar" onclick="soma()">
+    <div id="res">Resultado:</div>
+
+
+<script>
+    
+    function soma(){
+    var n1 = document.getElementById('vn1')
+    var n2 = document.getElementById('vn2')
+    var res = document.getElementById('res')
+
+   let nt1 = Number(vn1.value)
+   let nt2 = Number(vn2.value)
+       
+      let  s = nt1 + nt2
+        res.innerHTML = `A soma é ${s}`
+    }
+    
+</script>
+</body>
+</html>
